@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../../../app/icons/icons.css"><link rel="stylesheet" href="../../../app/tokens.css"><link rel="stylesheet" href="../../../app/components.css">
+<style>body{font:11px sans-serif;display:grid;grid-template-columns:repeat(8,110px);gap:10px;padding:16px;background:white}div{display:flex;flex-direction:column;align-items:center;gap:6px}.app-icon{width:28px;height:28px;color:var(--md3-on-surface)}</style>
+<script>
+const a='dashboard list history calendar calendar-today calendar-new time timer duration schedule search filter close cancel close-with-circle just-tick-mark approved alert alert-2 error info pencil user user-filled attachment file-doc file image paw location-icon dropdown back send cycle frequency notes notes-new note-alt view reset delete add add-with-circle menu-vertical compare reason-or-list lab-test tag pace saved'.split(' ');
+const n='weight enclosure calendar-clock category repeat-thin person-thin bell-thin book-thin seal-proof task-schedule task-attachment task-tag alarm list-view timeline-view panel-view table-view account-circle person-edit notifications-active medical-id'.split(' ');
+document.write(a.map(s=>`<div><span class="app-icon app-icon--tint i-${s}"></span>${s}</div>`).join('')+n.map(s=>`<div><span class="app-icon app-icon--tint" style="--icon:url(../../../app/icons/new/${s}.svg)"></span>new/${s}</div>`).join(''));
+</script>

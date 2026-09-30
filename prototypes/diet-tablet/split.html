@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diet · split-view preview (one-off)</title>
+<!-- One-off preview (Sourav, 2026-09-30): the species page's Species Wise tab as the requests-desk split
+     (360px card list + docked detail pane), on the real library. Not wired into the app. -->
+<link rel="stylesheet" href="../../app/tokens.css">
+<link rel="stylesheet" href="../../app/type.css">
+<link rel="stylesheet" href="../../app/components.css">
+<link rel="stylesheet" href="../../app/icons/icons.css">
+<link rel="stylesheet" href="diet.css">
+<style>
+  body { margin: 0; background: var(--md3-surface-variant); display: flex; justify-content: center; }
+  a { color: inherit; text-decoration: none; }
+  button { border: 0; background: none; font: inherit; color: inherit; cursor: pointer; padding: 0; }
+  .pane .dstable th, .pane .dstable td { padding: 10px 12px; }
+  .pane .dstable .dsub { padding-left: var(--sp-8); }
+  .frame { width: 834px; max-width: 100%; min-height: 100vh; background: var(--md3-background); color: var(--ink); font-family: Inter, system-ui, sans-serif; }
+  .frame #bar { position: sticky; top: 0; z-index: 3; }
+  .pgbody { padding: 0 var(--sp-20) var(--sp-24); display: flex; flex-direction: column; gap: var(--sp-16); }
+  /* the split: 40% cards, 60% detail; the cards keep the module's diet-card visuals */
+  .frame .split { grid-template-columns: 2fr 3fr; }
+  .split .dcards { position: sticky; top: 96px; }
+  .split .dcard { outline: 2px solid transparent; }
+  .split .dcard.sel { outline-color: var(--md3-primary); }
+  .pane { background: var(--md3-on-primary); border-radius: 8px; overflow: hidden; align-self: start; }
+  .pane .dshead { padding-top: var(--sp-16); }
+  .pane .dsrow2 { align-items: flex-start; }
+  .pane .dsr2-l { flex: 1; min-width: 0; }
+  .pane .p-period { margin-top: 4px; color: var(--md3-on-surface-variant); }
+  .pane .pbody { padding: 0 20px 20px; display: flex; flex-direction: column; gap: var(--sp-16); }
+  .pane .dseg { flex: none; }
+  @media (max-width: 700px) { .split { grid-template-columns: 1fr; } .pane { display: none; } .split .dcards { position: static; } }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header id="bar" class="sp"></header>
+  <nav class="stabs" id="tabs"></nav>
+  <div class="spband" id="band"></div>
+  <div class="pgbody">
+    <div class="spchips" id="chips"></div>
+    <div class="split">
+      <div class="dcards" id="list"></div>
+      <section class="pane" id="pane"></section>
+    </div>
+  </div>
+</div>
+<script src="icons.js"></script>
+<script>
+  const $ = s => document.querySelector(s);
+  const TYPE_NAME = { yearround: 'Year-round', seasonal: 'Seasonal', timebound: 'Time-Bound' };
+  const DIETS = [
+    { code: 'Diet 1251', name: 'Lion Standard Diet', ty: 'yearround', k: 'y', period: '', since: '3 Feb 2026', on: 1,
+      rules: ['Adult male · 8 kg/day', 'Adult female · 6 kg/day'], reason: '',
+      shared: { Species: [['BT', 'Bengal Tiger', 'Species-wide'], ['MC', 'Mugger Crocodile', 'Species-wide']], Sites: [['JM', 'Jamnagar Main Zoo', 'Site'], ['RC', 'Rescue Centre', 'Site'], ['BP', 'Bird Park', 'Site']], Sections: [['BC', 'Big Cats', 'Jamnagar Main Zoo'], ['RW', 'Raptor Wing', 'Bird Park'], ['FA', 'Forest Aviaries', 'Bird Park'], ['DS', 'Deer Section', 'Jamnagar Main Zoo']], Enclosures: [['LA', 'Lion Enclosure A', 'Big Cats']], Animals: [['RJ', 'Raja · LN-0012', 'Lion Enclosure A'], ['LE', 'Leela · LN-0015', 'Lion Enclosure A'], ['VE', 'Veer · LN-0021', 'Lion Enclosure B'], ['NO', 'Noor · LN-0023', 'Lion Enclosure B']] },
+      meals: [['5 pm – 6 pm', 'Mon, Tue', [['Lion Meat Preparation', 'Recipe', '', ['Buffalo meat on bone · 7 kg — Whole joint · Large cut', 'Chicken liver · 0.5 kg — Whole', 'Bone meal · 40 g — Dusted'], '', '7.5 kg'], ['Vitamin supplement', '', 'In food', [], 'Supplement', '10 g']]], ['', 'Thu, Fri, Sat', [['Buffalo meat on bone', '', 'Whole joint', [], '', '7 kg']]], ['', 'Sun', [['Beef or Goat meat', 'Choose one', '', [], 'Meat', '6 kg']]]],
+      nut: [['Energy', '2,540', 'kcal'], ['Protein', '171.7', 'g'], ['Fat', '200', 'g'], ['Carbohydrate', '0', 'g'], ['Moisture', '61.8', '%'], ['Calcium', '180', 'mg'], ['Phosphorus', '1,580', 'mg']] },
+    { code: 'Diet 1253', name: 'Lion Summer Light', ty: 'seasonal', k: 's', period: '1 Apr → 30 Jun · yearly', since: '28 Mar 2026', on: 1,
+      rules: [], reason: 'Chronic Illness',
+      shared: { Sites: [['JM', 'Jamnagar Main Zoo', 'Site']], Animals: [['RJ', 'Raja · LN-0012', 'Lion Enclosure A'], ['LE', 'Leela · LN-0015', 'Lion Enclosure A']] },
+      meals: [['7 am – 8 am', 'Mon', [['Beef', '', 'Chunks', [], '', '1 kg']]], ['', 'Wed, Thu, Fri', [['Beef', '', 'Chunks', [], '', '1 kg']]], ['', 'Sun', [['Beef or Goat meat', 'Choose one', '', [], 'Meat', '1 kg']]]],
+      nut: [['Energy', '1,210', 'kcal'], ['Protein', '84.3', 'g'], ['Fat', '92', 'g'], ['Calcium', '96', 'mg'], ['Phosphorus', '740', 'mg']] },
+    { code: 'Diet 1252', name: 'Lion Soft Diet', ty: 'timebound', k: 't', period: '5 Jun 2026 → 25 Jun 2026', since: '4 Jun 2026', on: 1,
+      rules: [], reason: 'Dental wear',
+      shared: { Enclosures: [['LB', 'Lion Enclosure B', 'Big Cats']], Animals: [['LE', 'Leela · LN-0015', 'Lion Enclosure A']] },
+      meals: [['5 pm – 6 pm', 'Daily', [['Buffalo meat, boneless minced', '', 'Minced · Small cut', [], '', '5 kg'], ['Chicken liver', '', 'Minced', [], '', '0.5 kg']]]],
+      nut: [['Energy', '1,980', 'kcal'], ['Protein', '148.2', 'g'], ['Fat', '141', 'g'], ['Calcium', '152', 'mg'], ['Phosphorus', '1,210', 'mg']] },
+    { code: 'Diet 1257', name: 'Lion Breeding Support', ty: 'seasonal', k: 's', period: '1 May → 31 Jul · yearly', since: '18 Apr 2026', on: 1,
+      rules: [], reason: 'Breeding season',
+      shared: { Enclosures: [['LA', 'Lion Enclosure A', 'Big Cats']] },
+      meals: [['5 pm – 6 pm', 'Daily', [['Lion Meat Preparation', 'Recipe', '', ['Buffalo meat on bone · 7 kg — Whole joint · Large cut', 'Chicken liver · 0.5 kg — Whole'], '', '8 kg'], ['Calcium supplement', '', 'Dusted', [], 'Supplement', '20 g']]]],
+      nut: [['Energy', '2,700', 'kcal'], ['Protein', '180', 'g'], ['Calcium', '420', 'mg']] },
+    { code: 'Diet 1263', name: 'Lion Fast-Day Substitute', ty: 'timebound', k: 't', period: '1 Jun 2026 → 30 Jun 2026', since: '29 May 2026', on: 1,
+      rules: [], reason: '',
+      shared: { Species: [['BT', 'Bengal Tiger', 'Species-wide']], Sites: [['JM', 'Jamnagar Main Zoo', 'Site'], ['RC', 'Rescue Centre', 'Site'], ['BP', 'Bird Park', 'Site']] },
+      meals: [['5 pm – 6 pm', 'Wed', [['Bone broth', '', 'Warm', [], '', '2 l'], ['Marrow bone', '', 'Whole', [], '', '1 pcs']]]],
+      nut: [['Energy', '640', 'kcal'], ['Protein', '38', 'g']] },
+  ];
+  let sel = 0, view = 'items', shTab = null;
+
+  $('#bar').innerHTML = `<button class="iconbtn" aria-label="Back">${ic('back', 24)}</button><span class="bar-ava t-body-title" aria-hidden="true">AL</span><div class="hd"><h1 class="t-medium-medium">Asiatic Lion</h1><p class="facts t-body-regular"><i>Panthera leo persica</i></p></div>`;
+  $('#tabs').innerHTML = `<a class="t-minor-medium on" href="javascript:void 0">Species Wise - 5</a><a class="t-minor-medium" href="javascript:void 0">Housing Wise - 7</a><a class="t-minor-medium" href="javascript:void 0">Animal Wise - 7</a>`;
+  $('#band').innerHTML = `<label class="spsearch">${ic('search', 20)}<input class="t-body-regular" placeholder="Search" aria-label="Search"></label><button class="spfilter" aria-label="Filters">${ic('filter', 24)}</button>`;
+  $('#chips').innerHTML = `<button class="spchip on t-body-medium">Active - 5</button><button class="spchip t-body-medium">Inactive - 1</button><button class="spchip t-body-medium">All - 6</button>`;
+
+  function drawList() {
+    $('#list').innerHTML = DIETS.map((d, i) => `<a class="dcard${i === sel ? ' sel' : ''}" href="javascript:void 0" onclick="sel=${i};view='items';shTab=null;draw()"><span class="dtxt"><span class="ttag ${d.ty} t-body-medium">${ic(d.ty, 16)}${TYPE_NAME[d.ty]}</span><span class="dtt"><span class="n t-minor-medium${d.on ? '' : ' strike'}">${d.code}</span><span class="m t-body-regular"><span>${d.name}</span>${d.period ? `<span>•</span><span>${d.period}</span>` : ''}</span></span></span>${ic('chev', 24)}</a>`).join('');
+  }
+  const cell = it => `${it[4] ? `<span class="dfeed t-subtext-title">${it[4]}</span>` : ''}<span class="dnm"><span class="t-minor-title">${it[0]}</span>${it[1] ? `<span class="ktag t-subtext-title">${it[1]}</span>` : ''}</span>${it[2] ? `<span class="prep t-body-reg-italic">(${it[2]})</span>` : ''}${it[3].length ? `<span class="dsub">${it[3].map(x => `<span class="t-body-regular">${x}</span>`).join('')}</span>` : ''}`;
+  const rows = d => d.meals.map((m, mi) => m[2].map((it, j) => `<tr>${mi === 0 && j === 0 && m[0] ? `<td class="time t-minor-title" rowspan="${d.meals.reduce((n, x) => n + x[2].length, 0)}">${m[0]}</td>` : ''}${j === 0 ? `<td class="t-body-regular" rowspan="${m[2].length}">${m[1]}</td>` : ''}<td>${cell(it)}</td><td class="num t-minor-title">${it[5]}</td></tr>`).join('')).join('');
+  function shared(d) {
+    const keys = Object.keys(d.shared); if (!keys.length) return '';
+    if (!shTab || !d.shared[shTab]) shTab = keys[0];
+    return `<div class="dsshared" style="margin-top:0"><h2 class="t-minor-title">Diet shared with</h2><div class="spchips">${keys.map(k => `<button class="spchip${shTab === k ? ' on' : ''} t-body-medium" onclick="shTab='${k}';draw()">${k} - ${d.shared[k].length}</button>`).join('')}</div><div class="ents">${d.shared[shTab].map(([i2, n, sub]) => `<a class="ent" href="javascript:void 0"><span class="av" aria-hidden="true"><span class="t-minor-title">${i2}</span></span><span class="grow"><span class="ent-n t-minor-title">${n}</span><span class="ent-m t-body-regular">${sub}</span></span></a>`).join('')}</div></div>`;
+  }
+  function drawPane() {
+    const d = DIETS[sel];
+    $('#pane').innerHTML = `
+      <div class="dshead"><div class="dsh-l"><div class="dsh-r1"><span class="t-medium-medium">${d.code}</span><span class="dstag${d.on ? ' ok' : ''} t-body-medium">${d.on ? 'Active' : 'Inactive'}</span></div><p class="dsh-nm t-body-regular">${d.name}</p></div></div>
+      <div class="dsrow2"><div class="dsr2-l"><p class="dstype ${d.ty} t-body-medium">${ic(d.ty, 16)}${TYPE_NAME[d.ty]}</p>${d.period ? `<p class="p-period t-body-medium">${d.period}</p>` : ''}<p class="dssince t-body-regular">Since ${d.since}</p></div>
+        <div class="dseg"><button class="t-minor-medium${view === 'items' ? ' on' : ''}" onclick="view='items';draw()">Items</button><button class="t-minor-medium${view === 'nutrition' ? ' on' : ''}" onclick="view='nutrition';draw()">Nutrition</button></div></div>
+      <div class="pbody">
+        ${view === 'items'
+          ? `<div class="dstable-wrap"><table class="dstable"><thead><tr><th class="t-subtext-title">Time</th><th class="t-subtext-title">Day</th><th class="t-subtext-title">Item</th><th class="num t-subtext-title">Daily amt</th></tr></thead><tbody>${rows(d)}</tbody></table></div>`
+          : `<div class="ncard" style="max-width:none"><p class="t-medium-title">Nutrition</p><p class="nsub t-body-regular">Per animal · per day — totals across every item in this plan</p>${d.nut.map(([l, v, u]) => `<div class="nrow"><span class="t-minor-title">${l}</span><span class="nv"><span class="t-minor-title">${v}</span><span class="t-body-regular"> ${u}</span></span></div>`).join('')}</div>`}
+        ${view === 'items' && d.rules.length ? `<div class="dreason"><span class="t-body-title">Feeding rules:</span>${d.rules.map(r => `<span class="rchip t-body-medium">${r}</span>`).join('')}</div>` : ''}
+        ${d.reason ? `<div class="dreason"><span class="t-body-title">Change reason:</span><span class="rchip t-body-medium">${d.reason}</span></div>` : ''}
+        ${shared(d)}
+      </div>`;
+  }
+  function draw() { drawList(); drawPane(); }
+  draw();
+</script>
+</body>
+</html>

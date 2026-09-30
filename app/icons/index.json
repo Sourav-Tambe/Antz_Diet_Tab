@@ -1,0 +1,975 @@
+{
+ "source": "Figma Workfile S3frvvs4t7dP5P9YaFXoAn · section 51735:555827 · Mobile / Icon / ALL",
+ "note": "style = outlined | filled, organising split only (first pass by Claude 2026-09-20); move an icon by changing its style here. pair = state pairs (on/off, checked/unchecked …) shown together in the Pairs group. review = version sibling flagged by Swathi (2026-09-20) for a keep/deprecate decision; shown under \"Needs review\". approved = glyphs Swathi approved from the New-icons area; inMaster=false until they are added to the Figma master component set.",
+ "icons": [
+  {
+   "id": "10139:46869",
+   "name": "Add with circle",
+   "slug": "add-with-circle",
+   "style": "outlined",
+   "pair": "add-remove-circle",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "add-primary"
+  },
+  {
+   "id": "41810:107321",
+   "name": "Administer",
+   "slug": "administer",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4870:12402",
+   "name": "Alert",
+   "slug": "alert",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "19246:48146",
+   "name": "Animal found back",
+   "slug": "animal-found-back",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "41428:61653",
+   "name": "Attachment",
+   "slug": "attachment",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4758:6657",
+   "name": "Calendar",
+   "slug": "calendar",
+   "style": "outlined",
+   "review": "older version; calendar-new is the current drawing",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "11644:39011",
+   "name": "Calender - new",
+   "slug": "calendar-new",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "11644:38785",
+   "name": "Call or contact",
+   "slug": "call-or-contact",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "4293:4860",
+   "name": "Checkbox - Unchecked",
+   "slug": "checkbox-unchecked",
+   "style": "outlined",
+   "pair": "checkbox",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "outline"
+  },
+  {
+   "id": "10548:17463",
+   "name": "Checkbox with outline",
+   "slug": "checkbox-with-outline",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "9972:10737",
+   "name": "Close with circle",
+   "slug": "close-with-circle",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "tertiary"
+  },
+  {
+   "id": "11836:23170",
+   "name": "Comment",
+   "slug": "comment",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "4722:5136",
+   "name": "Compare",
+   "slug": "compare",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4722:5108",
+   "name": "Cycle",
+   "slug": "cycle",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "9006:17365",
+   "name": "Dashboard",
+   "slug": "dashboard",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "4335:788",
+   "name": "Delete",
+   "slug": "delete",
+   "style": "outlined",
+   "review": "older version; delete-new is the current drawing",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "61342:175829",
+   "name": "Delete New",
+   "slug": "delete-new",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-secondary"
+  },
+  {
+   "id": "16278:13515",
+   "name": "Deselect",
+   "slug": "deselect",
+   "style": "outlined",
+   "pair": "select",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "outline"
+  },
+  {
+   "id": "14249:17101",
+   "name": "Discard eggs",
+   "slug": "discard-eggs",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "28943:25312",
+   "name": "Download w container",
+   "slug": "download-w-container",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "54088:472263",
+   "name": "Duration",
+   "slug": "duration",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "7468:63170",
+   "name": "Egg",
+   "slug": "egg",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "9072:11112",
+   "name": "Eggs - clutch",
+   "slug": "eggs-clutch",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "15694:20368",
+   "name": "File Doc",
+   "slug": "file-doc",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "14065:21137",
+   "name": "Filter 2",
+   "slug": "filter-2",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "66826:21466",
+   "name": "Filter 3",
+   "slug": "filter-3",
+   "style": "outlined",
+   "review": "three filter drawings; filter-2 is the one the headers use",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "22068:90417",
+   "name": "Frequency",
+   "slug": "frequency",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "15694:34792",
+   "name": "History",
+   "slug": "history",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "29369:63135",
+   "name": "Image",
+   "slug": "image",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "57483:49349",
+   "name": "In House Transfer",
+   "slug": "in-house-transfer",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "9518:30605",
+   "name": "Incubator",
+   "slug": "incubator",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "22068:67250",
+   "name": "Info",
+   "slug": "info",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "15694:34794",
+   "name": "Lab Test",
+   "slug": "lab-test",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "53268:132772",
+   "name": "Like",
+   "slug": "like",
+   "style": "outlined",
+   "pair": "like",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "8971:16463",
+   "name": "Location icon",
+   "slug": "location-icon",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "11644:38787",
+   "name": "Message",
+   "slug": "message",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "unknown"
+  },
+  {
+   "id": "19246:60900",
+   "name": "Missing",
+   "slug": "missing",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "15694:34796",
+   "name": "Note_alt",
+   "slug": "note-alt",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4341:843",
+   "name": "Notes",
+   "slug": "notes",
+   "style": "outlined",
+   "review": "older version; notes-new is the current drawing",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "5896:15365",
+   "name": "Notes new",
+   "slug": "notes-new",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "add-primary"
+  },
+  {
+   "id": "32643:80628",
+   "name": "Notification",
+   "slug": "notification",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "5116:16761",
+   "name": "Pencil",
+   "slug": "pencil",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "11077:30180",
+   "name": "Percentage",
+   "slug": "percentage",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "4293:4871",
+   "name": "Plus",
+   "slug": "plus",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "add-primary"
+  },
+  {
+   "id": "7332:15442",
+   "name": "Radio/unselect",
+   "slug": "radio-unselect",
+   "style": "outlined",
+   "pair": "radio",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "unknown"
+  },
+  {
+   "id": "14249:22754",
+   "name": "Reason or list",
+   "slug": "reason-or-list",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "10357:16014",
+   "name": "Remove or minus",
+   "slug": "remove-or-minus",
+   "style": "outlined",
+   "pair": "add-remove-circle",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "11077:22227",
+   "name": "Reset",
+   "slug": "reset",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "7313:15342",
+   "name": "Scan",
+   "slug": "scan",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "18458:10264",
+   "name": "Search",
+   "slug": "search",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "28847:22589",
+   "name": "Share",
+   "slug": "share",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "12937:9717",
+   "name": "Site Incharge",
+   "slug": "site-incharge",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "66826:157684",
+   "name": "Tag",
+   "slug": "tag",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4758:6703",
+   "name": "Time",
+   "slug": "time",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "22131:10203",
+   "name": "Timer",
+   "slug": "timer",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4843:11543",
+   "name": "Unsave",
+   "slug": "unsave",
+   "style": "outlined",
+   "pair": "bookmark",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "unknown"
+  },
+  {
+   "id": "11644:37227",
+   "name": "User",
+   "slug": "user",
+   "style": "outlined",
+   "pair": "user",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "59278:57489",
+   "name": "View",
+   "slug": "view",
+   "style": "outlined",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4891:16724",
+   "name": "Add",
+   "slug": "add",
+   "style": "filled",
+   "pair": "add-subtract",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "63307:21049",
+   "name": "Alert 2",
+   "slug": "alert-2",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "tertiary"
+  },
+  {
+   "id": "11948:63760",
+   "name": "Approved",
+   "slug": "approved",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "primary-main"
+  },
+  {
+   "id": "4293:4884",
+   "name": "Back",
+   "slug": "back",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-secondary-container"
+  },
+  {
+   "id": "19140:55484",
+   "name": "Ban",
+   "slug": "ban",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "tertiary"
+  },
+  {
+   "id": "20237:25691",
+   "name": "Cancel",
+   "slug": "cancel",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4293:4862",
+   "name": "Checkbox - Checked",
+   "slug": "checkbox-checked",
+   "style": "filled",
+   "pair": "checkbox",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "primary-main"
+  },
+  {
+   "id": "4293:4886",
+   "name": "Close",
+   "slug": "close",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-primary-container"
+  },
+  {
+   "id": "60055:24647",
+   "name": "Download",
+   "slug": "download",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "4293:5054",
+   "name": "Drowpdown",
+   "slug": "dropdown",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "11948:63846",
+   "name": "Error",
+   "slug": "error",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "error"
+  },
+  {
+   "id": "9113:13500",
+   "name": "Filter",
+   "slug": "filter",
+   "style": "filled",
+   "review": "three filter drawings; filter-2 is the one the headers use",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "57483:49350",
+   "name": "Inter Site Transfer",
+   "slug": "inter-site-transfer",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "16090:46585",
+   "name": "Just tick mark",
+   "slug": "just-tick-mark",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "53268:74343",
+   "name": "Liked",
+   "slug": "liked",
+   "style": "filled",
+   "pair": "like",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "error"
+  },
+  {
+   "id": "18077:19558",
+   "name": "List",
+   "slug": "list",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "10504:23949",
+   "name": "Menu - Horizontal",
+   "slug": "menu-horizontal",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "11479:25955",
+   "name": "Menu - Verticle",
+   "slug": "menu-vertical",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "31835:92564",
+   "name": "More",
+   "slug": "more",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "11227:35911",
+   "name": "Navigation",
+   "slug": "navigation",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface"
+  },
+  {
+   "id": "20536:11461",
+   "name": "Question",
+   "slug": "question",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "7332:15457",
+   "name": "Radio/Selected",
+   "slug": "radio-selected",
+   "style": "filled",
+   "pair": "radio",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "primary-main"
+  },
+  {
+   "id": "62426:34364",
+   "name": "Reorder Icon",
+   "slug": "reorder-icon",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "4843:11549",
+   "name": "Saved",
+   "slug": "saved",
+   "style": "filled",
+   "pair": "bookmark",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "primary-main"
+  },
+  {
+   "id": "16278:36391",
+   "name": "Select",
+   "slug": "select",
+   "style": "filled",
+   "pair": "select",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "primary-main"
+  },
+  {
+   "id": "11658:44850",
+   "name": "Send",
+   "slug": "send",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "id": "19571:34199",
+   "name": "Substract",
+   "slug": "subtract",
+   "style": "filled",
+   "pair": "add-subtract",
+   "pairRole": "off",
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "id": "11948:60390",
+   "name": "Switch_Active",
+   "slug": "switch-active",
+   "style": "filled",
+   "pair": "switch",
+   "pairRole": "on",
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "id": "11948:61122",
+   "name": "Switch_Inactive",
+   "slug": "switch-inactive",
+   "style": "filled",
+   "pair": "switch",
+   "pairRole": "off",
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "id": "11948:39324",
+   "name": "Toggle Off",
+   "slug": "toggle-off",
+   "style": "filled",
+   "pair": "toggle",
+   "pairRole": "off",
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "id": "11948:37244",
+   "name": "Toggle On",
+   "slug": "toggle-on",
+   "style": "filled",
+   "pair": "toggle",
+   "pairRole": "on",
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "id": "11377:39235",
+   "name": "Transfer",
+   "slug": "transfer",
+   "style": "filled",
+   "multicolor": false,
+   "fill": "on-primary-container"
+  },
+  {
+   "id": "11658:45022",
+   "name": "User filled",
+   "slug": "user-filled",
+   "style": "filled",
+   "pair": "user",
+   "pairRole": "on",
+   "multicolor": false,
+   "fill": "neutral-primary"
+  },
+  {
+   "slug": "mic",
+   "name": "Mic",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-20",
+   "source": "fi_5048766 vector in search bar 1266:3923 (was mis-named scan-24; it is a microphone, renamed by Swathi 2026-09-20)",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "neutral-secondary"
+  },
+  {
+   "slug": "expand",
+   "name": "expand",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Expand icon in Profile 1266:3221",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-primary"
+  },
+  {
+   "slug": "mortality-12",
+   "name": "mortality-12",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "skull vector in Mortality photo badge 1266:4063",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-primary"
+  },
+  {
+   "slug": "calendar-today",
+   "name": "calendar-today",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-20",
+   "source": "calendar_today in segmented tabs 16312:47396",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "slug": "pace",
+   "name": "pace",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-20",
+   "source": "pace icon on listing-card status strip 136:28535",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "moderate-secondary"
+  },
+  {
+   "slug": "file",
+   "name": "file",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Attachment Types 1223:9018",
+   "inMaster": false,
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "slug": "docx",
+   "name": "docx",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Attachment Types 1223:9022",
+   "inMaster": false,
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "slug": "excel",
+   "name": "excel",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Attachment Types 1223:9030",
+   "inMaster": false,
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "slug": "audio",
+   "name": "audio",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Attachment Types 1223:9036",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "moderate-secondary"
+  },
+  {
+   "slug": "pdf",
+   "name": "pdf",
+   "id": "",
+   "style": "filled",
+   "approved": "2026-09-20",
+   "source": "Attachment Types 1223:9041",
+   "inMaster": false,
+   "multicolor": true,
+   "fill": "multi"
+  },
+  {
+   "slug": "paw",
+   "name": "Paw",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-21",
+   "source": "Patients icon in the tablet Navigation bar, Hospital iPad NcSjVLd98TjNftPuPalL4b I42:209;42:195 (approved by Swathi 2026-09-21)",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-primary-container"
+  },
+  {
+   "slug": "schedule",
+   "name": "Schedule",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-21",
+   "source": "Schedule icon (calendar + clock) in the tablet Navigation bar, Hospital iPad NcSjVLd98TjNftPuPalL4b I339:17201;42:199 (approved by Swathi 2026-09-21)",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-primary-container"
+  },
+  {
+   "slug": "view-settings",
+   "name": "View settings",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-21",
+   "source": "View settings (two-slider) button in the tablet header, Hospital iPad NcSjVLd98TjNftPuPalL4b 902:56691 (approved by Swathi 2026-09-21; header uses it, list filter keeps filter-2); renamed from filter-sliders by Swathi 2026-09-21",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  },
+  {
+   "slug": "qr-code",
+   "name": "QR code",
+   "id": "",
+   "style": "outlined",
+   "approved": "2026-09-21",
+   "source": "QR box beside the Discharge Summary chip in the tablet Discharged row, Hospital iPad NcSjVLd98TjNftPuPalL4b I594:68982;594:68020 (layer qr_code_2). Approved by Swathi 2026-09-21 as the bare glyph (no container)",
+   "inMaster": false,
+   "multicolor": false,
+   "fill": "on-surface-variant"
+  }
+ ],
+ "pairs": {
+  "switch": [
+   "switch-active",
+   "switch-inactive"
+  ],
+  "toggle": [
+   "toggle-on",
+   "toggle-off"
+  ],
+  "checkbox": [
+   "checkbox-checked",
+   "checkbox-unchecked"
+  ],
+  "radio": [
+   "radio-selected",
+   "radio-unselect"
+  ],
+  "bookmark": [
+   "saved",
+   "unsave"
+  ],
+  "like": [
+   "liked",
+   "like"
+  ],
+  "user": [
+   "user-filled",
+   "user"
+  ],
+  "select": [
+   "select",
+   "deselect"
+  ],
+  "add-subtract": [
+   "add",
+   "subtract"
+  ],
+  "add-remove-circle": [
+   "add-with-circle",
+   "remove-or-minus"
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diet · App tablet prototype</title>
+<!-- Antz Diet, app tablet 834 × 1194 (and the kitchen's web frame 1280 × 800). Logic: docs/system.md. Plan: docs/plan.md. -->
+<link rel="stylesheet" href="../../app/tokens.css">
+<link rel="stylesheet" href="../../app/type.css">
+<link rel="stylesheet" href="../../app/components.css">
+<link rel="stylesheet" href="../../app/icons/icons.css">
+<link rel="stylesheet" href="diet.css">
+<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script><!-- Figma html-to-design capture; inert unless used from the Figma bar -->
+</head>
+<body>
+<div class="stage" id="stage">
+  <div id="figma-bar" class="stage__bar stage__bar--figma" role="toolbar" aria-label="Figma capture, prototype only"></div>
+  <div id="stage-bar" class="stage__bar" role="region" aria-label="Prototype controls, not part of the app"></div>
+  <div id="stage-bar2" class="stage__bar" role="region" aria-label="Prototype shortcuts, not part of the app"></div>
+  <div class="device-slot">
+    <div class="device t-body-regular" role="application" aria-label="Diet">
+      <header id="bar"></header>
+      <main id="main"></main>
+      <div id="foot"></div>
+      <nav id="nav" aria-label="Diet"></nav>
+      <div class="scrim" id="scrim" onclick="if(event.target===this)closeSheet()"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
+      <div class="toast t-body-medium" id="toast" role="status"></div>
+    </div>
+  </div>
+</div>
+<script src="icons.js"></script>
+<script src="data.js"></script>
+<script src="model.js"></script>
+<script src="ui.js"></script>
+<script src="views-diets.js"></script>
+<script src="views-requests.js"></script>
+<script src="views-tasks.js"></script>
+<script src="sheets.js"></script>
+<script src="app.js"></script>
+<script src="figma-bar.js"></script>
+</body>
+</html>

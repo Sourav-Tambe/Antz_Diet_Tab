@@ -1,0 +1,258 @@
+/* App components, measured node by node from Figma vspP2iZ2eWNJySESUJ3yc0 section 1262:2593 on 2026-09-20
+   via get_design_context. No hex, no font values here (compose with app/type.css classes).
+   Authored at phone width: 390/391 frame, 16px gutters → 358 content. Icons are the Figma exports in app/icons/. */
+
+/* ---------- Icons — src: "Mobile / Icon / ALL" instances, 24px default ---------- */
+.app-icon { display: inline-flex; width: 24px; height: 24px; flex: 0 0 auto; }               /* src: 1144:7410 size 24 */
+.app-icon--20 { width: 20px; height: 20px; }                                                   /* src: 1147:9296 */
+.app-icon--16 { width: 16px; height: 16px; }                                                   /* src: 1147:9276 */
+.app-icon--28 { width: 28px; height: 28px; }                                                   /* src: 1145:8500 */
+.app-icon img { width: 100%; height: 100%; display: block; object-fit: contain; }   /* never stretch a non-square glyph */
+/* Tinted icon: the master SVG becomes a mask so the colour comes from a token. Usage: class="app-icon app-icon--tint i-scan" style="color: var(--on-primary)" — the i-<slug> classes live in icons/icons.css (embedded data URIs, so it works over file://) */
+.app-icon--tint { background: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+
+/* ---------- Header family — src: frame 1144:7427 ---------- */
+.app-header { display: flex; align-items: center; gap: 8px; height: 72px; padding: 24px 16px; width: 100%;
+  background: var(--on-primary); filter: drop-shadow(0 2px 1px var(--black-04)); }              /* src: 1144:7426 h72 px16 py24 gap8 shadow 0 2 1 4% */
+.app-header__title { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; overflow-wrap: anywhere; } /* src: 1145:8186 */
+.app-header__title .title { color: var(--neutral-primary); }                                   /* src: 1144:7411 Antz_Medium_Medium, neutralPrimary */
+.app-header__title .subtitle { color: var(--neutral-secondary); }
+.app-header__title .title, .app-header__title .subtitle { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } /* src: 1145:8186 Header Title is a single line per row; long values truncate (stress-tested 2026-09-20) */
+.app-site .t-minor-medium { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } /* long site names truncate like 1220:6118 */                              /* src: 1145:8187 Antz_Body_Regular, neutralSecondary */
+.app-header--stack { flex-direction: column; align-items: stretch; height: auto; padding: 0 0 16px; gap: 0;
+  filter: none; box-shadow: 0 4px 4px 0 var(--black-05); }                                     /* src: 1147:9291 column, pb16, shadow 0 4 4 5% */
+.app-header--stack > .app-header { filter: none; }                                             /* inner header row — src: 1147:9292 */
+.app-header__section { display: flex; flex-direction: column; gap: 12px; padding: 0 16px; }    /* src: 1147:9197 px16 gap12 */
+.app-search-row { display: flex; align-items: center; gap: 8px; height: 44px; }                /* src: 1147:9294 h44 gap8 */
+.app-searchbar { flex: 1; min-width: 0; display: flex; align-items: center; gap: 4px; height: 44px; padding: 12px 8px; border-radius: 8px;
+  background: var(--background); color: var(--neutral-secondary); overflow: hidden; }          /* src: 1147:9295 bg Background r8 px8 py12 gap4 */
+.app-searchbar .placeholder { flex: 1; min-width: 0; }                                         /* src: 1147:9297 Antz_Body_Regular neutralSecondary */
+.app-searchbar .sep { color: var(--outline-variant); }                                         /* src: 1147:9298 "|" OutlineVariant */
+.app-iconbox { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 4px; border-radius: 8px; background: var(--background); } /* src: 1147:9300 44 r8 p4 bg Background */
+.app-iconbox--count { width: auto; gap: 4px; padding: 4px 6px; background: var(--on-surface); color: var(--on-primary); } /* src: 1147:9346 bg OnSurface px6 py4 gap4, count Antz_Body_Medium white */
+.app-filter-chips { display: flex; flex-wrap: nowrap; align-items: center; gap: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }                                    /* src: 1147:9273 one row, gap10, chips run past the frame edge → horizontal scroll, bleeds to the 16px gutters */
+.app-filter-chips::-webkit-scrollbar { display: none; }
+.app-filter-chips > * { flex: 0 0 auto; }
+.app-filter-chip { display: inline-flex; align-items: center; gap: 4px; padding: 8px; border-radius: 8px; border: 1px solid var(--outline-variant); color: var(--on-surface); white-space: nowrap; } /* src: 1147:9274 p8 r8 stroke OutlineVariant, label Antz_Subtext_Regular OnSurface, close 16 */
+.app-header--context-right .app-site { display: flex; align-items: center; gap: 4px; color: var(--on-primary-container); } /* src: 1145:8586 gap4, Antz_Minor_Medium OnPrimaryContainer + icon 20 */
+.app-header--context-left { gap: 12px; }                                                       /* src: 1145:8499 gap12 */
+.app-header--context-left .app-leadbox { display: inline-flex; padding: 6px; border-radius: 4px; background: var(--displaybg-primary-70); } /* src: 1145:8512 p6 r4 displaybgPrimary 70% */
+.app-header--context-left .title-row { display: flex; align-items: center; gap: 4px; }        /* src: 1145:8513 gap4, title icon 20 */
+.app-header--context-left .subtitle { color: var(--on-surface-variant); }                     /* src: 1145:8503 OnSurfaceVariant */
+.app-header--status .app-status-action { display: flex; align-items: center; justify-content: flex-end; gap: 4px; width: 194px; padding-left: 16px; } /* src: 1147:8688 w194 pl16 gap4 */
+.app-header--status .app-status-action .label { color: var(--on-tertiary-container); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } /* src: 1147:8689 Antz_Body_Medium OnTertiaryContainer */
+.app-badge-slot { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; } /* src: 1147:8690 */
+.app-badge { position: absolute; left: 19px; top: 2px; display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; padding: 3px 4px; border-radius: 16px; background: var(--tertiary); color: var(--on-primary); } /* src: 1147:8699 16 r16 Tertiary, Antz_Small white */
+.app-header--priority .app-toggle { display: flex; align-items: center; justify-content: flex-end; gap: 8px; color: var(--outline); } /* src: 1147:8682 gap8, label Antz_Body_Medium Outline */
+.app-switch { display: inline-flex; align-items: center; width: 40px; padding: 4px 4px 4px 20px; border-radius: 28px; background: var(--outline-variant);
+  border: 0.5px solid var(--outline-10); box-shadow: 0 4px 2px var(--black-08); }              /* src: 1147:8684 w40 r28 pl20 pr4 py4 OutlineVariant, hairline Outline 10%, shadow 0 4 2 8% */
+.app-switch__knob { width: 16px; height: 16px; border-radius: 50%; background: var(--on-primary); } /* src: 1147:8685 Circle 16 */
+.app-header--searchbar .app-search-row { flex: 1; min-width: 0; }                              /* src: 1147:8639 */
+.app-searchbar--round { background: transparent; border: 1px solid var(--outline-variant); border-radius: 24px; padding: 12px; justify-content: flex-end; } /* src: 1147:8640 stroke OutlineVariant r24 p12 gap4 */
+.app-iconbox--round { width: auto; height: auto; padding: 12px; border-radius: 24px; background: transparent; border: 1px solid var(--outline-variant); } /* src: 1147:8671 r24 p12 icon 20 */
+
+/* ---------- Form field / dropdown / radio — src: frame 1156:10070 ---------- */
+.app-field { position: relative; display: flex; align-items: center; gap: 24px; height: 56px; width: 100%; padding: 16px; border-radius: 4px;
+  background: var(--surface); border: 1px solid var(--outline); color: var(--on-primary-container); } /* src: 1156:10089 358x56 r4 p16 gap24 bg Surface stroke Outline, Antz_Minor_Regular OnPrimaryContainer */
+.app-field > .value { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.app-field--active { background: var(--on-primary); border: 1.5px solid var(--primary-main); }  /* src: 1156:10093 white, stroke Primary 1.5 */
+.app-field--active > .value { color: var(--neutral-50); }                                      /* src: 1156:10095 placeholder rgba(0,0,0,.4) = neutral_50 */
+.app-field--filled { background: var(--on-primary); border: 1px solid var(--outline-variant); } /* src: 1156:10100 white, stroke OutlineVariant */
+.app-field__label { position: absolute; left: 11px; top: 0; transform: translateY(-50%); padding: 0 4px; background: var(--on-primary); color: var(--on-surface-variant); line-height: 1; } /* src: 1156:10104 Title BG left11 px4, Antz_Subtext_Regular OnSurfaceVariant */
+.app-field--active > .app-field__label { color: var(--primary-main); }                          /* src: 1156:10098 Primary */
+.app-dropdown { }                                                                              /* same box as .app-field + trailing 24 icon — src: 1156:10071 */
+.app-dropdown--active .app-icon { transform: scaleY(-1); }                                     /* src: 1156:10078 chevron flipped */
+.app-radio { display: flex; align-items: center; justify-content: space-between; height: 56px; width: 100%; padding: 16px; border-radius: 4px;
+  background: var(--surface); border: 1px solid var(--outline); color: var(--on-primary-container); } /* src: 1156:10115 358x56 r4 p16 bg Surface stroke Outline, Antz_Minor_Regular OnPrimaryContainer, icon 24 */
+.app-radio--active { background: var(--on-secondary-container); border-color: transparent; color: var(--on-primary); } /* src: 1156:10119 bg OnSecondaryContainer, white text */
+
+/* ---------- Tabs — src: 1180:8039 (full row), 1218:5268 (with status), 1219:5967 (segmented) ---------- */
+/* Every interactive library class is authored without knowing which element carries it. On a <button> the browser supplies its own
+   2px outset border, grey ButtonFace fill and UI font, which is what showed up as heavy black boxes around the composer tabs
+   (Swathi 2026-09-23: "this is not correct"). Each control resets that chrome first; the rules below then draw the real thing. */
+.app-tab, .app-segment, .app-tab-status, .app-tabbar__item { border: 0; background: transparent; color: inherit; font-family: inherit; cursor: pointer; text-align: center; -webkit-appearance: none; appearance: none; }   /* font-family only — the size and weight belong to the .t-* class on the element, and the `font` shorthand would overwrite them */
+
+.app-tabs { display: flex; align-items: flex-start; width: 100%; background: var(--on-primary); } /* src: 1180:8039 */
+.app-tab { display: flex; align-items: center; justify-content: center; height: 48px; padding: 15px 16px; color: var(--on-surface-variant); text-align: center; white-space: nowrap;
+  border-bottom: 1px solid var(--outline-variant); }                                           /* src: I1180:8039;15711:2464 h48 px16 py15, Antz_Body_Medium OnSurfaceVariant, hairline OutlineVariant */
+.app-tab--active { color: var(--primary-main); border-bottom: 2px solid var(--primary-main); }   /* src: I1180:8039;15711:2460 Primary text + 2px Primary */
+.app-tab--fill { flex: 1; }
+.app-tabs--status { display: flex; align-items: flex-end; gap: 16px; padding: 12px 0 0 16px; width: 100%; background: transparent; border-bottom: 0.5px solid var(--neutral-05); } /* src: 1218:5268 pl16 pt12 gap16 hairline neutral05 */
+.app-tab-status { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 130px; color: var(--on-tertiary-container); text-align: center; } /* src: 1218:5269 w130 gap4 */
+.app-tab-status .count { color: var(--on-tertiary-container); }                                /* src: Antz_Minor_Title OnTertiaryContainer */
+.app-tab-status .indicator { height: 6px; width: 100%; padding: 0 2px; display: flex; align-items: flex-end; } /* src: Indicator h6 px2 */
+.app-tab-status--active .count { color: var(--tertiary); }                                     /* src: Tertiary */
+.app-tab-status--active .indicator::after { content: ''; display: block; width: 100%; height: 2px; border-radius: 100px 100px 0 0; background: var(--tertiary); } /* src: Shape fill 2px Tertiary r100 top */
+.app-segmented { display: flex; align-items: center; gap: 4px; width: 100%; padding: 8px; border-radius: 8px; background: var(--on-primary); } /* src: 1219:5968 w356 p8 gap4 r8 white */
+.app-segment { flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px; border-radius: 5px; color: var(--on-surface-variant); white-space: nowrap; } /* src: Component 17 p10 r5, Antz_Subtext_Regular OnSurfaceVariant */
+.app-segment--active { padding: 10px 9px; background: var(--primary-main); color: var(--on-primary); } /* src: 16276:34966 px9 py10 bg Primary, Antz_Subtext_title white */
+.app-segment--icon { flex: 0 0 32px; padding: 0 6px; }                                        /* src: 16312:47395 w32 px6, icon 20 */
+
+/* ---------- Bottom tab group — src: 1206:1353 (bar) + 1206:1341 (tabs) ---------- */
+.app-tabbar { position: relative; display: flex; justify-content: center; align-items: flex-start; width: 100%; height: 71px; background: var(--on-primary); border-radius: 20px 20px 0 0; } /* src: 1206:1293 390x71 r20 top */
+.app-tabbar__item { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 48px; padding: 0 32px 14px; margin-top: 11px; white-space: nowrap; } /* src: 1206:1350 h48 px32 pb14; Figma label uses an M3 on-surface-variant token (41-49-41) that is not in the Antz palette — colour omitted, inherits */
+.app-tabbar__item--active { padding-bottom: 0; color: var(--on-surface); }                     /* src: 1206:1345 OnSurface */
+.app-tabbar__item--active::after { content: ''; display: block; width: calc(100% + 40px); height: 3px; margin-top: 11px; border-radius: 100px 100px 0 0; background: var(--on-surface); } /* src: 1206:1347 3px OnSurface r100 top, Indicator h14 */
+
+/* ---------- Egg gender tag (flat, for egg listings) — src: component set "Egg - Gender tags" 1172:7106 (remote key 435f6a35…), 5 variants, 27x20, r5, Antz_Small ---------- */
+.app-tag { display: inline-flex; align-items: center; justify-content: center; min-width: 27px; height: 20px; padding: 4px 6px; border-radius: 5px; white-space: nowrap; } /* src: variants pad 4/6 (Female 4/7), r5 */
+.app-tag--male   { background: var(--secondary-container); color: var(--on-secondary-container); }   /* src: 1172:7107 SecondaryContainer / OnSecondaryContainer */
+.app-tag--female { background: var(--tertiary-alpha-30); color: var(--tertiary); padding: 4px 7px; } /* src: 1172:7109 Tertiary 30% / Tertiary */
+.app-tag--undetermined { background: var(--error-container-30); color: var(--error); }             /* src: 1172:7111 ErrorContainer 30% / Error */
+.app-tag--id     { background: var(--displaybg-secondary); color: var(--on-primary-container); }    /* src: 1172:7113 displaybgSecondary / OnPrimaryContainer */
+.app-tag--group  { background: var(--add-primary); color: var(--on-primary); }                      /* src: 1172:7115 addPrimary / OnPrimary */
+.app-tag--auto { min-width: 0; }
+
+/* ---------- Listing card — src: 1218:5261 (Individual listing, 358x229) ---------- */
+.app-listing-card { display: flex; flex-direction: column; gap: 8px; width: 100%; padding-top: 12px; border-radius: 10px; background: var(--on-primary); overflow: hidden; } /* src: 1218:5261 r10 pt12 gap8 white */
+.app-listing-card__byline { display: flex; align-items: center; gap: 8px; padding: 0 8px 0 16px; color: var(--neutral-secondary); } /* src: 1218:5047 pl16 pr8 gap8, Antz_Subtext_Regular neutralSecondary */
+.app-listing-card__byline .name { color: var(--on-surface-variant); }                          /* src: 1218:5048 OnSurfaceVariant */
+.app-listing-card__body { display: flex; align-items: flex-start; gap: 10px; padding: 0 12px; } /* src: 1218:5053 px12 gap10 */
+.app-listing-card__avatar { display: flex; flex-direction: column; align-items: center; gap: 10px; } /* src: 1218:5054 gap10 */
+.app-listing-card__avatar img.photo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block; } /* src: 1173:3 44x44 */
+.app-listing-card__details { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; color: var(--on-surface-variant); } /* src: 1218:5055 gap2 */
+.app-listing-card__details > * { overflow-wrap: anywhere; }
+.app-listing-card__details .alert { color: var(--tertiary); }                                  /* src: 1218:5057 Antz_Body_Medium Tertiary */
+.app-listing-card__details .sci { font-style: italic; letter-spacing: 0.1px; }                 /* src: 1218:5064 Inter Italic 12 ls .1 */
+.app-listing-card__status { display: flex; align-items: center; gap: 4px; margin: 0 2px 2px; padding: 8px 14px; border-radius: 0 0 10px 10px; background: var(--moderate-secondary-10); color: var(--on-tertiary-container); } /* src: 1218:5069 px2 pb2; strip px14 py8 gap4 r10 bottom, moderateSecondary 10%, Antz_Body_Regular OnTertiaryContainer */
+.app-listing-card__status .label { flex: 1; min-width: 0; }
+.app-listing-card__status .state { color: var(--tertiary); white-space: nowrap; }             /* src: 89:129888 Antz_Subtext_title Tertiary */
+
+/* ---------- Selection header — src: 1220:6113 (Select animal / default, 390 wide) ---------- */
+.app-select-header { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; padding-bottom: 16px; background: var(--on-primary); box-shadow: 0 4px 2px var(--black-05); } /* src: 1220:6113 gap8 pb16 shadow 0 4 2 5% */
+.app-select-header__row { display: flex; align-items: flex-start; gap: 8px; width: 100%; padding: 26px 16px 14px; } /* src: 1220:6114 px16 pt26 pb14 gap8 */
+.app-select-header__row .title { flex: 1; min-width: 0; align-self: stretch; display: flex; align-items: center; color: var(--on-secondary-container); } /* src: 1220:6116 Antz_Medium_Medium OnSecondaryContainer */
+.app-select-header__site { display: flex; align-items: center; justify-content: flex-end; gap: 4px; width: 150px; align-self: stretch; color: var(--on-primary-container); } /* src: 1220:6117 w150 gap4 */
+.app-select-header__site .name { flex: 1; min-width: 0; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } /* src: 1220:6118 Antz_Subtext_title ellipsis */
+.app-select-header .app-search-row { width: calc(100% - 32px); }                               /* src: 1220:6120 w358 */
+
+/* ---------- Attachment types — src: 1223:9016 ---------- */
+.app-attachment { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 8px; border-radius: 8px; background: var(--secondary-container-20); } /* src: 1223:9017 40 p8 r8 SecondaryContainer 20% (Other Doc) */
+.app-attachment--docx  { background: var(--add-primary-10); }                                  /* src: 1223:9021 addPrimary 10% */
+.app-attachment--excel { background: var(--on-background); }                                   /* src: 1223:9029 OnBackground */
+.app-attachment--audio { background: var(--notes-20); }                                        /* src: 1223:9035 notes 20% */
+.app-attachment--pdf   { background: var(--tertiary-20); }                                     /* src: 1223:9040 TertiaryContainer 20% */
+.app-attachment .app-icon { width: 24px; height: 24px; }                                       /* src: icon 24 */
+
+/* ---------- Animal card for selection — src: 1266:3932 (358x120) and compact 1266:4031 (358x100), section "ANimal Card" 1266:3896 ---------- */
+.app-animal-card { display: flex; align-items: flex-start; gap: 8px; width: 100%; padding: 8px; border-radius: 12px; background: var(--on-primary);
+  box-shadow: 0 4px 14px 0 var(--neutral-primary-a8); overflow: hidden; }                     /* src: 1266:3932 p8 gap8 r12 white, shadow 0 4 14 8% */
+.app-animal-card--compact { align-items: center; }                                              /* src: 1266:4031 items-center */
+.app-profile { position: relative; flex: 0 0 auto; width: 104px; height: 104px; border-radius: 8px; overflow: hidden; } /* src: Profile 1266:3219 104, r8 */
+.app-animal-card--compact .app-profile { width: 84px; height: 84px; }                          /* src: 1266:4032 84 */
+.app-profile img.photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.app-profile .app-photo-badge { position: absolute; left: 4px; top: 4px; }                      /* src: 1266:3220 left4 top4 */
+.app-profile .app-cites { position: absolute; right: 4px; top: 4px; display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 4px 6px; border-radius: 6px;
+  background: var(--neutral-primary-a40); color: var(--on-primary); box-shadow: 0 2px 2px 0 var(--neutral-primary-a10); text-shadow: 0 1px 4px var(--neutral-primary-a30); } /* src: 1266:3222 Cites, black 40% r6 h24 px6 py4, Antz_Small white */
+.app-profile .app-expand { position: absolute; right: 4px; bottom: 4px; width: 16px; height: 16px; } /* src: 1266:3221 Expand icon, inset 80.77%/3.85% ≈ 16px at 4px */
+.app-profile .app-expand img { width: 100%; height: 100%; display: block; }
+.app-animal-card__details { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; align-self: stretch; } /* src: 1266:3934 gap4 */
+.app-animal-card__title { display: flex; align-items: center; gap: 2px; width: 100%; }        /* src: 1266:3935 Tag & CTA gap2 */
+.app-animal-card__title .tag { flex: 1; min-width: 0; color: var(--on-primary-container); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } /* src: 1266:3936 Antz_Body_Title OnPrimaryContainer */
+.app-animal-card__title .cta { flex: 0 0 auto; color: var(--on-surface); text-align: right; }  /* src: 1266:3937 "+20" Antz_Body_Title OnSurface */
+.app-animal-card__body { display: flex; align-items: flex-start; gap: 8px; width: 100%; }       /* src: 1266:3938 gap8 */
+.app-animal-card__rows { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; color: var(--on-surface-variant); } /* src: 1266:3939 gap4, Antz_Body_Medium OnSurfaceVariant */
+.app-animal-card__rows > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-animal-card__rows .sci { font-style: italic; color: var(--neutral-secondary); }           /* src: 1266:3944 Inter Italic 14 neutralSecondary */
+.app-animal-card__action { flex: 0 0 auto; align-self: stretch; display: flex; align-items: flex-start; padding-top: 23px; } /* src: 1266:3948 pt23 */
+.app-animal-card__action .app-icon { width: 20px; height: 20px; }                              /* src: 1266:3949 20, remove icon */
+.app-animal-card--compact .app-animal-card__details > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--on-surface-variant); } /* src: 1266:4033 Antz_Body_Medium */
+.app-animal-card--compact .app-animal-card__details > .tag { color: var(--on-primary-container); } /* src: 1266:4034 Antz_Body_Title OnPrimaryContainer */
+
+/* ---------- Gender tag (the actual animal gender tag, sits on the photo) — src: "Gender tags" set (instances 1266:4047 … 1266:4063), 24x24 r6, Antz_Small white, shadow 0 2 1 10%.
+   Mortality is a MODIFIER: any gender + skull icon on OnErrorContainer (Swathi 2026-09-20). ---------- */
+.app-photo-badge { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 24px; height: 24px; padding: 4px 6px; border-radius: 6px; color: var(--on-primary); white-space: nowrap;
+  filter: drop-shadow(0 2px 1px var(--neutral-primary-a10)); }
+.app-photo-badge--male   { background: var(--secondary-main); }                                  /* src: 1266:4047 MD3_Antz/Secondary */
+.app-photo-badge--female { background: var(--tertiary-a70); }                                   /* src: 1266:4050 Tertiary 70% */
+.app-photo-badge--undetermined { background: var(--error-a70); }                                /* src: 1266:4053 Error 70% */
+.app-photo-badge--indetermined { background: var(--add-primary-a60); }                          /* src: 1266:4056 addPrimary 60% */
+.app-photo-badge--group  { background: var(--on-surface-a60); min-width: 32px; }                /* src: 1266:4059 OnSurface 60%, w32 "G 12" */
+.app-photo-badge--mortality { background: var(--rustic-red) !important; min-width: 44px; }      /* modifier: dead animal of any gender — src: 1266:4063 MD3_Antz/OnErrorContainer, w44, letter + skull 12 */
+.app-photo-badge .app-icon { width: 12px; height: 12px; }
+
+/* ---------- Listing header: filter dropdowns + search — src: 1266:3906 (390x92) ---------- */
+.app-list-head { display: flex; flex-direction: column; gap: 12px; width: 100%; padding: 12px 16px; background: var(--on-primary); } /* src: 1266:3906 px16 py12 gap12 */
+.app-list-head__filters { display: flex; align-items: center; justify-content: space-between; } /* src: 1266:3907 */
+.app-list-head__dropdown { display: inline-flex; align-items: center; gap: 4px; color: var(--on-primary-container); } /* src: 1266:3908 gap4, Antz_Subtext_title OnPrimaryContainer; chevron = master dropdown icon at 16 (Swathi: arrow-down-16 deleted, use dropdown) */
+.app-list-head__row { display: flex; align-items: center; gap: 10px; }                          /* src: 1266:3918 gap10 */
+.app-searchbar--compact { height: 40px; padding: 12px 12px 12px 10px; color: var(--on-primary-container); } /* src: 1266:3919 h40 pl10 pr12, placeholder Antz_Subtext_Regular OnPrimaryContainer */
+.app-iconbox--40 { width: 40px; height: 40px; padding: 12px; }                                   /* src: 1266:3929 40 p12 */
+.app-iconbox--active { background: var(--on-surface); }                                          /* src: 1266:3927 OnSurface */
+
+/* ---------- Spacing utilities — one class per step of the scale (tokens.css --sp-*). p / px / py / pt / pr / pb / pl / m / mt / mb / gap ---------- */
+.p-2 { padding: var(--sp-2); } .px-2 { padding-left: var(--sp-2); padding-right: var(--sp-2); } .py-2 { padding-top: var(--sp-2); padding-bottom: var(--sp-2); } .pt-2 { padding-top: var(--sp-2); } .pr-2 { padding-right: var(--sp-2); } .pb-2 { padding-bottom: var(--sp-2); } .pl-2 { padding-left: var(--sp-2); } .m-2 { margin: var(--sp-2); } .mt-2 { margin-top: var(--sp-2); } .mb-2 { margin-bottom: var(--sp-2); } .gap-2 { gap: var(--sp-2); }
+.p-4 { padding: var(--sp-4); } .px-4 { padding-left: var(--sp-4); padding-right: var(--sp-4); } .py-4 { padding-top: var(--sp-4); padding-bottom: var(--sp-4); } .pt-4 { padding-top: var(--sp-4); } .pr-4 { padding-right: var(--sp-4); } .pb-4 { padding-bottom: var(--sp-4); } .pl-4 { padding-left: var(--sp-4); } .m-4 { margin: var(--sp-4); } .mt-4 { margin-top: var(--sp-4); } .mb-4 { margin-bottom: var(--sp-4); } .gap-4 { gap: var(--sp-4); }
+.p-8 { padding: var(--sp-8); } .px-8 { padding-left: var(--sp-8); padding-right: var(--sp-8); } .py-8 { padding-top: var(--sp-8); padding-bottom: var(--sp-8); } .pt-8 { padding-top: var(--sp-8); } .pr-8 { padding-right: var(--sp-8); } .pb-8 { padding-bottom: var(--sp-8); } .pl-8 { padding-left: var(--sp-8); } .m-8 { margin: var(--sp-8); } .mt-8 { margin-top: var(--sp-8); } .mb-8 { margin-bottom: var(--sp-8); } .gap-8 { gap: var(--sp-8); }
+.p-12 { padding: var(--sp-12); } .px-12 { padding-left: var(--sp-12); padding-right: var(--sp-12); } .py-12 { padding-top: var(--sp-12); padding-bottom: var(--sp-12); } .pt-12 { padding-top: var(--sp-12); } .pr-12 { padding-right: var(--sp-12); } .pb-12 { padding-bottom: var(--sp-12); } .pl-12 { padding-left: var(--sp-12); } .m-12 { margin: var(--sp-12); } .mt-12 { margin-top: var(--sp-12); } .mb-12 { margin-bottom: var(--sp-12); } .gap-12 { gap: var(--sp-12); }
+.p-16 { padding: var(--sp-16); } .px-16 { padding-left: var(--sp-16); padding-right: var(--sp-16); } .py-16 { padding-top: var(--sp-16); padding-bottom: var(--sp-16); } .pt-16 { padding-top: var(--sp-16); } .pr-16 { padding-right: var(--sp-16); } .pb-16 { padding-bottom: var(--sp-16); } .pl-16 { padding-left: var(--sp-16); } .m-16 { margin: var(--sp-16); } .mt-16 { margin-top: var(--sp-16); } .mb-16 { margin-bottom: var(--sp-16); } .gap-16 { gap: var(--sp-16); }
+.p-20 { padding: var(--sp-20); } .px-20 { padding-left: var(--sp-20); padding-right: var(--sp-20); } .py-20 { padding-top: var(--sp-20); padding-bottom: var(--sp-20); } .pt-20 { padding-top: var(--sp-20); } .pr-20 { padding-right: var(--sp-20); } .pb-20 { padding-bottom: var(--sp-20); } .pl-20 { padding-left: var(--sp-20); } .m-20 { margin: var(--sp-20); } .mt-20 { margin-top: var(--sp-20); } .mb-20 { margin-bottom: var(--sp-20); } .gap-20 { gap: var(--sp-20); }
+.p-24 { padding: var(--sp-24); } .px-24 { padding-left: var(--sp-24); padding-right: var(--sp-24); } .py-24 { padding-top: var(--sp-24); padding-bottom: var(--sp-24); } .pt-24 { padding-top: var(--sp-24); } .pr-24 { padding-right: var(--sp-24); } .pb-24 { padding-bottom: var(--sp-24); } .pl-24 { padding-left: var(--sp-24); } .m-24 { margin: var(--sp-24); } .mt-24 { margin-top: var(--sp-24); } .mb-24 { margin-bottom: var(--sp-24); } .gap-24 { gap: var(--sp-24); }
+.p-28 { padding: var(--sp-28); } .px-28 { padding-left: var(--sp-28); padding-right: var(--sp-28); } .py-28 { padding-top: var(--sp-28); padding-bottom: var(--sp-28); } .pt-28 { padding-top: var(--sp-28); } .pr-28 { padding-right: var(--sp-28); } .pb-28 { padding-bottom: var(--sp-28); } .pl-28 { padding-left: var(--sp-28); } .m-28 { margin: var(--sp-28); } .mt-28 { margin-top: var(--sp-28); } .mb-28 { margin-bottom: var(--sp-28); } .gap-28 { gap: var(--sp-28); }
+.p-32 { padding: var(--sp-32); } .px-32 { padding-left: var(--sp-32); padding-right: var(--sp-32); } .py-32 { padding-top: var(--sp-32); padding-bottom: var(--sp-32); } .pt-32 { padding-top: var(--sp-32); } .pr-32 { padding-right: var(--sp-32); } .pb-32 { padding-bottom: var(--sp-32); } .pl-32 { padding-left: var(--sp-32); } .m-32 { margin: var(--sp-32); } .mt-32 { margin-top: var(--sp-32); } .mb-32 { margin-bottom: var(--sp-32); } .gap-32 { gap: var(--sp-32); }
+.p-40 { padding: var(--sp-40); } .px-40 { padding-left: var(--sp-40); padding-right: var(--sp-40); } .py-40 { padding-top: var(--sp-40); padding-bottom: var(--sp-40); } .pt-40 { padding-top: var(--sp-40); } .pr-40 { padding-right: var(--sp-40); } .pb-40 { padding-bottom: var(--sp-40); } .pl-40 { padding-left: var(--sp-40); } .m-40 { margin: var(--sp-40); } .mt-40 { margin-top: var(--sp-40); } .mb-40 { margin-bottom: var(--sp-40); } .gap-40 { gap: var(--sp-40); }
+.p-48 { padding: var(--sp-48); } .px-48 { padding-left: var(--sp-48); padding-right: var(--sp-48); } .py-48 { padding-top: var(--sp-48); padding-bottom: var(--sp-48); } .pt-48 { padding-top: var(--sp-48); } .pr-48 { padding-right: var(--sp-48); } .pb-48 { padding-bottom: var(--sp-48); } .pl-48 { padding-left: var(--sp-48); } .m-48 { margin: var(--sp-48); } .mt-48 { margin-top: var(--sp-48); } .mb-48 { margin-bottom: var(--sp-48); } .gap-48 { gap: var(--sp-48); }
+.p-56 { padding: var(--sp-56); } .px-56 { padding-left: var(--sp-56); padding-right: var(--sp-56); } .py-56 { padding-top: var(--sp-56); padding-bottom: var(--sp-56); } .pt-56 { padding-top: var(--sp-56); } .pr-56 { padding-right: var(--sp-56); } .pb-56 { padding-bottom: var(--sp-56); } .pl-56 { padding-left: var(--sp-56); } .m-56 { margin: var(--sp-56); } .mt-56 { margin-top: var(--sp-56); } .mb-56 { margin-bottom: var(--sp-56); } .gap-56 { gap: var(--sp-56); }
+.p-64 { padding: var(--sp-64); } .px-64 { padding-left: var(--sp-64); padding-right: var(--sp-64); } .py-64 { padding-top: var(--sp-64); padding-bottom: var(--sp-64); } .pt-64 { padding-top: var(--sp-64); } .pr-64 { padding-right: var(--sp-64); } .pb-64 { padding-bottom: var(--sp-64); } .pl-64 { padding-left: var(--sp-64); } .m-64 { margin: var(--sp-64); } .mt-64 { margin-top: var(--sp-64); } .mb-64 { margin-bottom: var(--sp-64); } .gap-64 { gap: var(--sp-64); }
+
+/* ==================== TABLET — hospital app/tab (iPad 9th gen 810×1080) ====================
+   Composed from tokens + text styles + icons in hospital passes v1–v4, approved by Swathi on the library page 2026-09-21.
+   GLOBAL tablet components only. Module-specific pieces (case type chips, Incoming action column, Discharged date lines, …) live in
+   modules/hospital.css — Swathi 2026-09-21: "chips like Check up / Follow up are module specific; keep them like that".
+   Class names are the ones the previews already use. Not yet approved (still page-level in the previews): Under Care card
+   extras + Stable/Critical chips, Document chip + QR box, floating Add Patient, tablet navigation bar. */
+/* ---------- Header — tablet (902:56630) · approved 2026-09-21 ---------- */
+.hdr { display: flex; flex-direction: column; background: var(--on-primary); flex: 0 0 auto; }
+.hdr__row { display: flex; align-items: center; gap: var(--sp-12); padding: var(--sp-20) var(--sp-20) var(--sp-20) var(--sp-16); }  /* src: 902:56630 pl16 pr20 py20 gap12 */
+.hdr__logo { width: 40px; height: 40px; flex: 0 0 auto; }                                                          /* src: 902:56633 Frame 40 */
+.hdr__logo img { width: 100%; height: 100%; display: block; }
+.hdr__title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-4); }                    /* src: 902:56655 gap4 */
+.hdr__title-row { display: flex; align-items: center; gap: var(--sp-4); color: var(--on-secondary-container); }    /* src: 902:56656 gap4, Antz_Major_Title OnSecondaryContainer, dropdown 20 */
+.hdr__title-row .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hdr__sub { display: flex; align-items: center; gap: var(--sp-8); color: var(--neutral-secondary); white-space: nowrap; overflow: hidden; } /* src: 902:56659 gap8 Antz_Body_Medium neutralSecondary */
+.hdr__sub .sep { color: var(--outline-variant); }                                                                   /* src: 902:56661 "|" OutlineVariant */
+.hdr__sub .doctor { overflow: hidden; text-overflow: ellipsis; }
+.hdr__tools { display: flex; align-items: center; gap: var(--sp-16); padding: 1px var(--sp-20); }                   /* src: 902:56680 px20 py1 gap16 */
+/* ---------- Search bar + date dropdown + 44 icon box (902:56682 / 902:56685 / 902:56690) · approved 2026-09-21 ---------- */
+.tab-search { flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--sp-8); padding: var(--sp-12); border: 1px solid var(--outline-variant); border-radius: 8px; color: var(--on-surface-variant); background: transparent; font-family: inherit; }   /* background: transparent — the field is a <button> in the previews; without it the browser paints its grey default (Swathi 2026-09-21) */ /* src: 902:56682 stroke OutlineVariant r8 p12 gap8, Antz_Body_Medium OnSurfaceVariant, search 20 */
+.tab-date { display: flex; align-items: center; width: 224px; height: 44px; flex: 0 0 auto; border: 1px solid var(--outline-variant); border-radius: 8px; overflow: hidden; } /* src: 902:56685 w224 h44 r8 */
+.tab-date .value { flex: 1; min-width: 0; padding: var(--sp-12); color: var(--on-surface-variant); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* src: 902:56686 p12 */
+.tab-date .well { display: flex; align-items: center; height: 100%; padding: var(--sp-12); background: var(--displaybg-primary); } /* src: 902:56688 p12 displaybgPrimary, calendar 24 */
+.tab-iconbox { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 auto; padding: var(--sp-4) var(--sp-8); border-radius: 8px; background: var(--displaybg-secondary); } /* src: 902:56690 44 r8 px8 py4 displaybgSecondary */
+/* ---------- Primary tabs — pill (902:56696) · approved 2026-09-21 ---------- */
+.hdr__tabs-wrap { padding: var(--sp-16) var(--sp-20) 0 0; }                                                          /* src: 902:56694 pt16 pr20 */
+.tab-primary-tabs { position: relative; display: flex; align-items: center; gap: var(--sp-12); padding: 0 var(--sp-20) var(--sp-20); overflow-x: auto; scrollbar-width: none; } /* src: 902:56695 px20 pb20 gap12, clips */
+.tab-primary-tabs::-webkit-scrollbar { display: none; }
+.tab-primary { border: 0; font-family: inherit; cursor: pointer; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; height: 40px; min-width: 138px; padding: var(--sp-8) var(--sp-16); border-radius: 8px; background: var(--neutral-05); color: var(--on-surface-variant); box-shadow: 0 1px 3px 0 var(--neutral-primary-a10); white-space: nowrap; } /* src: 902:56697 Primary Tabs inactive h40 w138 px16 py8 r8 black5, shadow 0 1 3 10% */
+.tab-primary--active { background: var(--on-primary-container); color: var(--on-primary); box-shadow: none; filter: drop-shadow(0 1px 1.5px var(--neutral-primary-a10)); } /* src: 902:56696 active fill OnPrimaryContainer, white label, drop 0 1 1.5 10%; keeps the pill width (Figma shrinks it — Needs Review) */
+/* ---------- Section row: segmented pill (944:62024) + filter chip + icon box 40 (944:62029 / 944:62032) · approved 2026-09-21 ---------- */
+.section { display: flex; align-items: center; justify-content: space-between; flex: 0 0 auto; }
+.tab-seg { display: flex; align-items: center; padding: 5px; border-radius: 14px; background: var(--on-primary); } /* src: 944:62432 p5 r14 white */
+.tab-seg__item { display: flex; align-items: center; justify-content: center; width: 110px; height: 36px; padding: var(--sp-8) 14px; border-radius: 10px; color: var(--on-surface-variant); white-space: nowrap; cursor: pointer; border: 0; background: transparent; font-family: inherit; } /* src: 944:62434 w110 h36 px14 py8 r10 */
+.tab-seg__item--active { padding: var(--sp-8) 15px; background: var(--on-primary-container); color: var(--on-primary); filter: drop-shadow(0 1px 1.5px var(--neutral-primary-a10)); } /* src: 944:62433 px15, OnPrimaryContainer, drop 0 1 1.5 10% */
+.tab-filters { display: flex; align-items: center; gap: var(--sp-8); }                                              /* src: 944:62437 gap8 */
+.tab-dd { display: inline-flex; align-items: center; gap: var(--sp-2); height: 40px; padding: 6px var(--sp-12); border-radius: 8px; background: var(--on-primary); color: var(--on-surface-variant); white-space: nowrap; } /* src: 944:62438 h40 px12 py6 gap2 r8 white, Antz_Body_Medium, dropdown 20 */
+.tab-iconbox--40 { width: auto; height: 40px; padding: var(--sp-4) var(--sp-8); background: var(--on-primary); }    /* src: 944:62441 h40 px8 py4 r8 white */
+/* ---------- Tablet animal row card — shell shared by Incoming / Under Care / Discharged (567:38279, 594:65952, 594:68982) · Incoming + Discharged approved 2026-09-21 ---------- */
+.cards { display: flex; flex-direction: column; gap: var(--sp-12); flex: 0 0 auto; }                                /* src: 594:66238 cards 12 apart */
+.pcard { display: flex; flex-direction: column; gap: var(--sp-16); padding: var(--sp-16); border-radius: 8px; background: var(--on-primary); overflow: hidden; } /* src: 594:65952 p16 gap16 r8 white */
+.pcard__row { display: flex; align-items: center; gap: var(--sp-12); }                                              /* src: I594:65952;561:37531 gap12 */
+.pcard .app-profile { width: 82px; height: auto; min-height: 82px; align-self: stretch; }                        /* src: I594:65952;561:37532 Profile 82, r8 (library .app-profile radius), stretches to the text block (row = 114 with p16) */
+.pcard .app-profile img.photo { position: absolute; inset: 0; }                                                     /* photo fills the box without sizing the row — a percentage-height <img> in a stretched flex item otherwise pushes the row to the image's natural height (the "stretched card" Swathi flagged) */
+.pcard__content { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-4); color: var(--on-surface-variant); } /* src: I594:65952;561:37533 flex 1 gap4, Antz_Body_Medium OnSurfaceVariant · Swathi 2026-09-21: AID + Site lines carry .t-body-regular (lighter than the species line) */
+.pcard__content > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }                              /* src: 561:37534 / 561:37540 ellipsis */
+.pcard__content .tag { color: var(--on-primary-container); }                                                        /* src: I594:65952;561:37534 Antz_Minor_Title OnPrimaryContainer */
+.pcard__meta { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: var(--sp-8); color: var(--on-surface-variant); } /* src: I594:65952;561:37541 "Tag with text" flex 1 gap8 */
+.pcard__meta > * { max-width: 100%; }
+.expand-btn { display: inline-flex; padding: var(--sp-4); border-radius: 20px; background: var(--displaybg-primary); cursor: pointer; border: 0; flex: 0 0 auto; } /* src: I594:65982;561:37591 p4 r20 displaybgPrimary, dropdown 20 */
+.expand-btn .app-icon { transition: transform .15s ease; }
+.pcard--open .expand-btn .app-icon { transform: rotate(180deg); }                                                   /* src: I594:65952;561:37551 rotate 180 */
+.pcard__note { display: none; flex-direction: column; gap: var(--sp-12); padding: var(--sp-16); border-radius: 8px; background: var(--displaybg-primary-a60); color: var(--on-surface-variant); overflow-wrap: anywhere; } /* src: I594:65952;567:38371 p16 r8 displaybgPrimary 60% · 567:38374 gap12, Antz_Subtext_Regular, labels Antz_Subtext_title */
+.pcard--open .pcard__note { display: flex; }
+.pcard__note-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-16); }     /* src: I594:65952;589:63584 space-between */
+/* ---------- Buttons 40 high: filled Primary · outlined Error 0.5 · outlined OnPrimaryContainer with icon (567:38352, 567:38354, I594:65710;594:65801) · approved 2026-09-21 ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; width: 78px; height: 40px; padding: var(--sp-8); border-radius: 4px; white-space: nowrap; cursor: pointer; border: 0; font-family: inherit; } /* src: 567:38352/38354 78×40 p8 r4 */
+.btn--reject { background: var(--on-primary); border: 0.5px solid var(--error); color: var(--error); }             /* src: 567:38352 stroke Error 0.5 */
+.btn--admit  { background: var(--primary-main); color: var(--on-primary); }                                         /* src: 567:38354 Primary */
+.btn--revert { width: 79px; gap: var(--sp-4); padding: var(--sp-8) var(--sp-8) var(--sp-8) 6px; background: var(--on-primary); border: 1px solid var(--on-primary-container); color: var(--on-primary-container); } /* src: I594:65710;594:65801 79×40 pl6 pr8 py8 gap4 stroke OnPrimaryContainer 1, reset 16 */

@@ -1,0 +1,154 @@
+[
+ {
+  "slug": "enclosure",
+  "name": "Enclosure",
+  "style": "filled",
+  "source": "Animal Care Unit row in Admit Patient, Hospital iPad NcSjVLd98TjNftPuPalL4b 589:43009 (house-with-paw glyph, 24 in a 40 Primary 20% box). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-21",
+  "fill": "on-surface"
+ },
+ {
+  "slug": "list-view",
+  "name": "List view",
+  "style": "outlined",
+  "source": "View Settings › View type › List View, Hospital iPad NcSjVLd98TjNftPuPalL4b 622:75315 (12px glyph in a 20 box). Not in the master",
+  "since": "2026-09-21",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "panel-view",
+  "name": "Panel view",
+  "style": "outlined",
+  "source": "View Settings › View type › Panel View, Hospital iPad 622:75601 (Noun Project 'template' glyph, 20px). Not in the master",
+  "since": "2026-09-21",
+  "fill": "neutral-secondary"
+ },
+ {
+  "slug": "table-view",
+  "name": "Table view",
+  "style": "outlined",
+  "source": "View Settings › View type › Table View, Hospital iPad NcSjVLd98TjNftPuPalL4b 1006:36745 (Noun Project 'template' glyph, 20px). Not in the master",
+  "since": "2026-09-21",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "weight",
+  "name": "Weight",
+  "style": "filled",
+  "source": "Patient details header animal card, Hospital iPad NcSjVLd98TjNftPuPalL4b 664:78425 (\"Weight icon\", 14, Tertiary). Not in the master",
+  "since": "2026-09-21",
+  "fill": "tertiary"
+ },
+ {
+  "slug": "medical-id",
+  "name": "Medical id",
+  "style": "filled",
+  "source": "Patient details header medical-info tile, Hospital iPad 664:78356 (person + id card, 20). Check the master before drawing anew",
+  "since": "2026-09-21",
+  "fill": "moderate-secondary"
+ },
+ {
+  "slug": "attending-vet",
+  "name": "Attending vet",
+  "style": "filled",
+  "source": "Patient details header medical-info tile, Hospital iPad 664:78370 (20). Check the master before drawing anew",
+  "since": "2026-09-21",
+  "fill": "tertiary"
+ },
+ {
+  "slug": "timeline-view",
+  "name": "Timeline view",
+  "style": "filled",
+  "source": "Monitoring tab view toggle, Hospital iPad NcSjVLd98TjNftPuPalL4b 921:58873 (Noun Project 'timeline view', 16). Not in the master",
+  "since": "2026-09-21",
+  "fill": "on-primary-container"
+ },
+ {
+  "slug": "category",
+  "name": "Category",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134319 (\"Task Icons=Category\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "task-mic",
+  "name": "Mic (task)",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134316 (\"Task Icons=Mic\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "neutral-secondary"
+ },
+ {
+  "slug": "account-circle",
+  "name": "Account circle",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134322 (\"Task Icons=Account circle\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "calendar-clock",
+  "name": "Calendar clock",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134325 (\"Task Icons=Calendar clock\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "alarm",
+  "name": "Alarm",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134328 (\"Task Icons=Alarm\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "task-schedule",
+  "name": "Schedule (task)",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134331 (\"Task Icons=Schedule\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "notifications-active",
+  "name": "Notifications active",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134334 (\"Task Icons=Notifications active\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "task-tag",
+  "name": "Tag (task)",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134337 (\"Task Icons=Tag\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "seal-proof",
+  "name": "Seal proof",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134340 (\"Task Icons=Seal proof\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "task-attachment",
+  "name": "Attachment (task)",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134346 (\"Task Icons=Attachment\", 20). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ },
+ {
+  "slug": "task-notification",
+  "name": "Notifications (task)",
+  "style": "outlined",
+  "source": "Figma \"Requests - Task\" VPKybj9jCMEQKKPynTu7Zo › \"Task - Task Management Icons\" 1:134315 › 1:134349 (\"Task Icons=Notifications\", 24). Not in the Mobile / Icon / ALL master",
+  "since": "2026-09-24",
+  "fill": "on-surface-variant"
+ }
+]
